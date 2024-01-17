@@ -304,8 +304,8 @@ class PluginManager(metaclass=Singleton):
                 # 权限
                 if plugin.get("level"):
                     conf.update({"auth_level": plugin.get("level")})
-                    if self.siteshelper.auth_level < plugin.get("level"):
-                        continue
+                    # if self.siteshelper.auth_level < plugin.get("level"):
+                    #     continue
                 # 名称
                 if plugin.get("name"):
                     conf.update({"plugin_name": plugin.get("name")})
@@ -371,8 +371,8 @@ class PluginManager(metaclass=Singleton):
             # 权限
             if hasattr(plugin, "auth_level"):
                 conf.update({"auth_level": plugin.auth_level})
-                if self.siteshelper.auth_level < plugin.auth_level:
-                    continue
+                # if self.siteshelper.auth_level < plugin.auth_level:
+                #     continue
             # 名称
             if hasattr(plugin, "plugin_name"):
                 conf.update({"plugin_name": plugin.plugin_name})
