@@ -3,6 +3,7 @@
 build/
 dist/
 nginx/
+venv/
 test.py
 app/helper/sites.py
 app/helper/*.so

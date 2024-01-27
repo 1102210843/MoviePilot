@@ -50,9 +50,9 @@ RUN apt-get update -y \
 COPY requirements.txt requirements.txt
 RUN apt-get update -y \
     && apt-get install -y build-essential \
-    && pip install --upgrade pip \
-    && pip install Cython \
-    && pip install -r requirements.txt \
+    && pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    && pip install Cython -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    && pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple \
     && playwright install-deps chromium \
     && apt-get remove -y build-essential \
     && apt-get autoremove -y \

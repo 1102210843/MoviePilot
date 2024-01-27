@@ -1,1 +1,3 @@
 APP_VERSION = 'v1.5.9-1'
+
+print(APP_VERSION)
